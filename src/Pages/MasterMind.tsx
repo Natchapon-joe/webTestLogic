@@ -90,7 +90,7 @@ export default function MasterMind() {
 
   return (
     <Profiler id="MasterMind" onRender={onRender}>
-      <div className="w-screen h-screen flex justify-center items-center">
+      <div className="w-screen min-h-screen flex justify-center">
         <div className="flex flex-col flex-wrap w-full h-full max-w-[800px] max-h-[800px] bg-slate-500 rounded-[8px] my-[12px] shadow-sm">
           <div className="px-[24px] py-[12px] gap-[8px] grid grid-rows-2">
             <div className="w-full text-center text-[24px]">
