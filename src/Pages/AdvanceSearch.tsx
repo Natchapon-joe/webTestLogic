@@ -109,20 +109,20 @@ export default function AdvanceSearch() {
     for (const region in regionResult) {
       const detailRegions = data[regionResult[region] as keyof typeof data];
       if (checkBoxProvinces.length > 0) {
-        for (const detailRegion in checkBoxProvinces) {
+        for (const province in checkBoxProvinces) {
           const languages: string[] =
             detailRegions[
-              checkBoxProvinces[detailRegion] as keyof typeof detailRegions
+              checkBoxProvinces[province] as keyof typeof detailRegions
             ];
           languages?.forEach((language: string) => {
             setListCheckLanguages((prev) => [...prev, language]);
           });
         }
       } else {
-        for (const detailRegion in listCheckProvinces) {
+        for (const detailprovince in listCheckProvinces) {
           const languages: string[] =
             detailRegions[
-              listCheckProvinces[detailRegion] as keyof typeof detailRegions
+              listCheckProvinces[detailprovince] as keyof typeof detailRegions
             ];
           languages?.forEach((language: string) => {
             setListCheckLanguages((prev) => [...prev, language]);

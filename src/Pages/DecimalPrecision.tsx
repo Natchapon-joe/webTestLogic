@@ -33,7 +33,6 @@ export default function DecimalPrecision() {
       (!isNaN(parseInt(numericValue)) && /^\d*\.?\d*$/.test(numericValue)) ||
       numericValue === ""
     ) {
-      console.log(typeof numericValue);
       setInput((prev) => ({
         ...prev,
         [key]: numericValue,

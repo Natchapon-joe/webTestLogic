@@ -41,7 +41,7 @@ export default function MasterMind() {
   // useMemo use for rerendered => we don't want to gen useState every time we want to gen it with dependency change value
   const valueRandom: string[] = useMemo(() => generateRandomNumbers(), []);
   // check in put not null and check event for enter to submit value
-  // usecallback use for rerendered react gen every rows we don't want gen new function, we want to gen with dependency of useState change value
+  // usecallback use for rerendered react
   const handleInputUser = useCallback(
     (event: React.KeyboardEvent<HTMLInputElement>, valueInput: string) => {
       if (event?.key === "Enter" && valueInput !== "") {
