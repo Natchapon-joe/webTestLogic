@@ -37,11 +37,7 @@ export default function MasterMind() {
   // show log
   const [logChat, setLogChat] = useState<string[]>([]);
 
-  // random value
-  // useMemo use for rerendered => we don't want to gen useState every time we want to gen it with dependency change value
   const valueRandom: string[] = useMemo(() => generateRandomNumbers(), []);
-  // check in put not null and check event for enter to submit value
-  // usecallback use for rerendered react
   const handleInputUser = useCallback(
     (event: React.KeyboardEvent<HTMLInputElement>, valueInput: string) => {
       if (event?.key === "Enter" && valueInput !== "") {
